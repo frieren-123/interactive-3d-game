@@ -1,0 +1,21 @@
+{
+  "name": "interactive-3d-game",
+  "version": "1.0.0",
+  "description": "A simple interactive 3D game built with Three.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "three.js",
+    "3d",
+    "game",
+    "webgl"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.160.0"
+  }
+}
