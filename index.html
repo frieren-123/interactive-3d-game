@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        #game-container {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        #ui-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 100;
+        }
+        
+        #ui-overlay h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        #ui-overlay p {
+            margin: 5px 0;
+        }
+        
+        #score {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        #instructions {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    <div id="ui-overlay">
+        <h2>🎮 3D Game</h2>
+        <p>Score: <span id="score">0</span></p>
+        <p>Coins: <span id="coins">0</span> / <span id="total-coins">5</span></p>
+    </div>
+    <div id="instructions">
+        <strong>Controls:</strong><br>
+        W/↑ - Move Forward<br>
+        S/↓ - Move Backward<br>
+        A/← - Move Left<br>
+        D/→ - Move Right<br>
+        SPACE - Jump
+    </div>
+    
+    <!-- Import Three.js from local node_modules -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "./node_modules/three/build/three.module.js"
+        }
+    }
+    </script>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
