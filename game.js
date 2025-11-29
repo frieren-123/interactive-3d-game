@@ -43,11 +43,11 @@ const keys = {
 };
 
 window.addEventListener('keydown', (e) => {
-    if (keys.hasOwnProperty(e.key)) keys[e.key] = true;
+    if (e.key in keys) keys[e.key] = true;
 });
 
 window.addEventListener('keyup', (e) => {
-    if (keys.hasOwnProperty(e.key)) keys[e.key] = false;
+    if (e.key in keys) keys[e.key] = false;
 });
 
 // Game loop
